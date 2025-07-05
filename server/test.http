@@ -1,0 +1,31 @@
+### LOGIN (studente o docente)
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+  "email": "studente3@studenti.univ.it",
+  "password": "password"
+}
+
+### SESSIONE CORRENTE
+GET http://localhost:3001/api/session/current
+Cookie:  # <-- il cookie sarà gestito automaticamente dalla REST Client
+
+### ASSIGNMENT DELLO STUDENTE (richiede login come studente)
+GET http://localhost:3001/api/my-assignments
+
+### LOGOUT
+POST http://localhost:3001/api/logout
+
+
+### LOGIN (docente)
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+  "email": "m.rossi@univ.it",
+  "password": "password"
+}
+
+### ASSIGNMENT DEL DOCENTE
+GET http://localhost:3001/api/assignments
